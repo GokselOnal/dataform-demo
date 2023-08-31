@@ -1,0 +1,9 @@
+config { type: "view" }
+
+SELECT
+  title,
+  SUM(num_characters) AS total_chars
+FROM ${ref("wikipedia")}
+GROUP BY title
+ORDER BY total_chars DESC
+LIMIT 10

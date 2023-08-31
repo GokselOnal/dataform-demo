@@ -1,0 +1,10 @@
+config { type: "view" }
+
+SELECT
+  corpus,
+  word,
+  SUM(word_count) AS word_count
+FROM ${ref("shakespeare")}
+GROUP BY corpus, word
+ORDER BY word_count DESC
+LIMIT 10

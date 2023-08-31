@@ -1,0 +1,10 @@
+config { type: "view" }
+
+SELECT
+  actor_attributes.name,
+  repository.url,
+  created_at 
+FROM ${ref("github_nested")}
+WHERE repository.url IS NOT NULL
+ORDER BY created_at DESC
+LIMIT 10

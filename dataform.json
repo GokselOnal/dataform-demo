@@ -1,5 +1,5 @@
 {
-  "defaultSchema": "dataform",
+  "defaultSchema": "dataform_target",
   "assertionSchema": "dataform_assertions",
   "warehouse": "bigquery",
   "defaultDatabase": "keen-virtue-394018",
